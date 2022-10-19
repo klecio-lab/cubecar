@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'inter', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 0;
+}
+
+.header .logo{
+    width: 14%;
+}
+
+.header .navbar ul{
+    list-style: none;
+}
+
+.header .navbar ul li{
+    position:relative;
+    float: left;
+    font-weight: 200;
+    font-size: 15px;
+}
+.header .navbar ul li:hoover{
+    color: rgb(163, 163, 163);
+}
+
+.header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+.header .navbar ul li a:hover{
+    color: #fff;
+    font-weight: 300;
+}
+
+#menu-bar{
+    display: none;
+}
+
+.header label{
+    font-size: 20px;
+    color:#fff;
+    cursor: pointer;
+    display: none;   
+}
+.header label img{
+    width: 10%;
+    float: right;
+}
+
+form{
+    display: block;
+    margin-top: 80px;
+    text-align: center;
+}
+
+form input{
+    width: 60%;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    box-shadow:  1px 1px 6px #0000001c;
+}
+
+form input:hover{
+    background-color: #eeeeee75;
+}
+
+form input:focus-visible{
+    outline: 1px solid #1872CF ;
+}
+
+form input::placeholder{
+    color: #000000be;
+}
+form button{
+    width: 10%;
+    padding: 0.8rem;
+    background-color: #1872CF;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    box-shadow:  1px 1px 6px #0000001c;
+}
+
+form button:hover{
+    cursor: pointer;
+    background-color: #6b63fff1;
+}
+
+.detalhes{
+    width: 30%;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detalhes img{
+    width: 100%;
+}
+.detalhes h2{
+    font-weight: 600;
+    float: left;
+}
+@media(max-width:1064px){
+    .header{
+        padding: 20px;
+    }
+    .navbar{
+        display: none;
+    }
+    .header label{
+        display: initial;
+    }
+
+    .header .logo{
+        width: 30%;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #000000;
+        border-top: 1px solid rgba(0,0,0,.1);
+    }
+
+    .header .navbar ul li{
+        width: 100%;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+        display: none;
+        display: block;
+    }
+    form button{
+        width: 20%;
+    }
+
+}
+
+@media screen and (max-width:720px){
+    #anuncios{
+        flex-direction: column;
+    }
+    #anuncios .anuncio{
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    #anuncios .anuncio:last-child{
+        margin-bottom: 0;
+    }
+
+    #anuncios .anuncio button{
+        font-size: 70%;
+        width: 50%;
+    }
+}
